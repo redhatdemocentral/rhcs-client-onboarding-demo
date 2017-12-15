@@ -84,8 +84,13 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
-- v1.0 - Process driven application for client onboarding intalled on any OpenShift Container Platform using process server 6.4.
+- v1.0 - Process driven application for client onboarding intalled on any OpenShift Container Platform 3.7 using process server 6.4.
 
+![FSI Backoffice](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/fsi-backoffice-ui.png)
 
-![Cloud Suite](https://raw.githubusercontent.com/redhatdemocentral/rhcs-rewards-demo/master/docs/demo-images/rhcs-arch.png)
+![FSI Customer](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/fsi-customer-ui.png)
+
+![Deployment](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/ocp-deployments.png)
+
+![Cloud Suite](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboading-demo/master/docs/demo-images/rhcs-arch.png)
 
