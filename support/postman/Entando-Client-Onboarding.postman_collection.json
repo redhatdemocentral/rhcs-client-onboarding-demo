@@ -1,0 +1,1292 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Entando-Client-Onboarding",
+		"_postman_id": "6ea9e982-3bd4-bd30-4f63-dc18114d5abc",
+		"description": "RESTful requests of the Entando Client Onboarding demo.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get containers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/",
+				"description": "Get containers"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Process Start form",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/forms/processes/commercial-client-onboarding.ClientOnboardingProcess",
+				"description": "Get containers"
+			},
+			"response": []
+		},
+		{
+			"name": "Start new process",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"client\":{\n      \"com.redhat.bpms.demo.fsi.onboarding.model.Client\":{\n         \"id\":null,\n         \"name\":\"Red Hat\",\n         \"country\":\"IT\",\n         \"type\":\"BIG_BUSINESS\",\n         \"bic\":\"123456789\",\n         \"relatedParties\":[\n            {\n               \"com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty\":{\n                  \"id\":null,\n                  \"relationship\":\"Consultant\",\n                  \"party\":{\n                     \"com.redhat.bpms.demo.fsi.onboarding.model.Party\":{\n                        \"id\":null,\n                        \"name\":\"Duncan\",\n                        \"surname\":\"Doyle\",\n                        \"dateOfBirth\":1506590295001,\n                        \"ssn\":\"987654321\",\n                        \"email\": \"ddoyle@redhat.com\"\n                     }\n                  }\n               }\n            }\n         ]\n      }\n   },\n   \"accountManager\": \"prakash\"\n}"
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/commercial-client-onboarding.ClientOnboardingProcess/instances/correlation/entando-15",
+				"description": "Start process."
+			},
+			"response": []
+		},
+		{
+			"name": "Get process instances",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/processes/instances/",
+				"description": "Get all process instances on the KIE-Server."
+			},
+			"response": []
+		},
+		{
+			"name": "Get process instance image",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/images/processes/instances/3",
+				"description": "Get the process image."
+			},
+			"response": []
+		},
+		{
+			"name": "Signal process with account name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"ddoyle\""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/instances/6/signal/account_registered",
+				"description": "Signal account registered."
+			},
+			"response": []
+		},
+		{
+			"name": "Get task instances for potential owner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/tasks/instances/pot-owners?user=ddoyle",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances",
+						"pot-owners"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "ddoyle",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete process instance",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/instances/67",
+				"description": "Delete the process instance."
+			},
+			"response": []
+		},
+		{
+			"name": "Set task state to started",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/tasks/15/states/started?user=ddoyle",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"client-onboarding",
+						"tasks",
+						"15",
+						"states",
+						"started"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "ddoyle",
+							"equals": true
+						}
+					]
+				},
+				"description": "Start task"
+			},
+			"response": []
+		},
+		{
+			"name": "Get task with input and output data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/tasks/7?user=ddoyle&withInputData=true&withOutputData=true",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"client-onboarding",
+						"tasks",
+						"7"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "ddoyle",
+							"equals": true
+						},
+						{
+							"key": "withInputData",
+							"value": "true",
+							"equals": true
+						},
+						{
+							"key": "withOutputData",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": "Get Task with input and output data."
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Enrichment Document Task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"htUploadedDocument\" : {\n    \"org.jbpm.document.service.impl.DocumentImpl\":{\n      \"identifier\" : \"myCoolIdentifier\",\n      \"name\" : \"My Cool Document.\",\n      \"link\" : \"my-cool-link\",\n      \"size\" : 1200,\n      \"lastModified\" : 1507840764549,\n      \"content\" : \"VkdocGN5QnBjeUJoSUhOaGJYQnNaU0JwWkdWdWRHbG1hV05oZEdsdmJpQmtiMk4xYldWdWRDND0=\",\n      \"attributes\" : {\n        \"testKey\" : \"testValue\"\n      }\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/tasks/17/states/completed?user=ddoyle",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"client-onboarding",
+						"tasks",
+						"17",
+						"states",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "ddoyle",
+							"equals": true
+						}
+					]
+				},
+				"description": "Complete task with document."
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Document Approval task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"htApprovalStatus\" : \"Approved because of this and this.\",\n  \"htUploadedDocumentApproved\" : true\n}\n"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/tasks/18/states/completed?user=admin",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"client-onboarding",
+						"tasks",
+						"18",
+						"states",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "admin",
+							"equals": true
+						}
+					]
+				},
+				"description": "Complete Manual Approval Task."
+			},
+			"response": []
+		},
+		{
+			"name": "Register Process Instance with Vars Advanced Query.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query-name\" : \"getProcessInstancesWithVars\",\n  \"query-source\" : \"java:jboss/datasources/ExampleDS\",\n  \"query-expression\" : \"select pil.*, v.variableId, v.value from ProcessInstanceLog pil INNER JOIN VariableInstanceLog v ON (v.processInstanceId = pil.processInstanceId)INNER JOIN (select vil.processInstanceId ,vil.variableId, MAX(vil.ID) maxvilid  FROM VariableInstanceLog vil GROUP BY vil.processInstanceId, vil.variableId ORDER BY vil.processInstanceId)  x ON (v.variableId = x.variableId  AND v.id = x.maxvilid )\",\n  \"query-target\" : \"PROCESS\"\n}"
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/definitions/getProcessInstancesWithVars",
+				"description": "Register Process Instance with Vars Advanced Query."
+			},
+			"response": []
+		},
+		{
+			"name": "Query Process Instances with Account Manager",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"order-asc\" : false,\n  \"query-params\" : [ {\n    \"cond-column\" : \"variableId\",\n    \"cond-operator\" : \"EQUALS_TO\",\n    \"cond-values\" : [ \"accountManager\" ]\n  }, {\n    \"cond-column\" : \"value\",\n    \"cond-operator\" : \"EQUALS_TO\",\n    \"cond-values\" : [ \"prakash\" ]\n  } ]\n}"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/definitions/getProcessInstancesWithVars/filtered-data?mapper=ProcessInstancesWithVariables&page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"definitions",
+						"getProcessInstancesWithVars",
+						"filtered-data"
+					],
+					"query": [
+						{
+							"key": "mapper",
+							"value": "ProcessInstancesWithVariables",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "100",
+							"equals": true
+						}
+					]
+				},
+				"description": "Query Process Instances with Account Manager."
+			},
+			"response": []
+		},
+		{
+			"name": "Replace Process Instance with Vars Advanced Query.",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query-name\" : \"getProcessInstancesOfAccountManager\",\n  \"query-source\" : \"java:jboss/datasources/ExampleDS\",\n  \"query-expression\" : \"select pil.*, v.variableId, v.value from ProcessInstanceLog pil INNER JOIN VariableInstanceLog v ON (v.processInstanceId = pil.processInstanceId)INNER JOIN (select vil.processInstanceId ,vil.variableId, MAX(vil.ID) maxvilid  FROM VariableInstanceLog vil GROUP BY vil.processInstanceId, vil.variableId ORDER BY vil.processInstanceId)  x ON (v.variableId = x.variableId  AND v.id = x.maxvilid )\",\n  \"query-target\" : \"PROCESS\"\n}"
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/definitions/getProcessInstancesWithVars",
+				"description": "Replace Process Instance with Vars Advanced Query."
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Additional Client Details Task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"htClient\" : {\n      \"com.redhat.bpms.demo.fsi.onboarding.model.Client\":{\n         \"id\":null,\n         \"name\":\"Red Hat\",\n         \"country\":\"IT\",\n         \"type\":\"BIG_BUSINESS\",\n         \"bic\":\"123456789\",\n         \"address\": {\n         \t\"street\":\"314 Littleton Rd\",\n         \t\"zipcode\":\"01886\",\n         \t\"state\":\"MA\",\n         \t\"country\":\"USA\"\n         },\n         \"relatedParties\":[\n            {\n               \"com.redhat.bpms.demo.fsi.onboarding.model.RelatedParty\":{\n                  \"id\":null,\n                  \"relationship\":\"Consultant\",\n                  \"party\":{\n                     \"com.redhat.bpms.demo.fsi.onboarding.model.Party\":{\n                        \"id\":null,\n                        \"name\":\"Duncan\",\n                        \"surname\":\"Doyle\",\n                        \"dateOfBirth\":1506590295001,\n                        \"ssn\":\"987654321\",\n                        \"email\": \"ddoyle@redhat.com\"\n                     }\n                  }\n               }\n            }\n         ]\n      }\n   }\n}"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/tasks/26/states/completed?user=ddoyle&auto-progress=true",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"client-onboarding",
+						"tasks",
+						"26",
+						"states",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "ddoyle",
+							"equals": true
+						},
+						{
+							"key": "auto-progress",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": "Complete additional client details task."
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Enrichment Document Task - AutoProgress",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"htUploadedDocument\" : {\n    \"identifier\" : \"myCoolIdentifier\",\n    \"name\" : \"My Cool Document.\",\n    \"link\" : \"my-cool-link\",\n    \"size\" : 1200,\n    \"lastModified\" : 1507840764549,\n    \"content\" : \"VkdocGN5QnBjeUJoSUhOaGJYQnNaU0JwWkdWdWRHbG1hV05oZEdsdmJpQmtiMk4xYldWdWRDND0=\",\n    \"attributes\" : {\n      \"testKey\" : \"testValue\"\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/tasks/1/states/completed?user=ddoyle&auto-progress=true",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"containers",
+						"client-onboarding",
+						"tasks",
+						"1",
+						"states",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "ddoyle",
+							"equals": true
+						},
+						{
+							"key": "auto-progress",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": "Complete task with document and auto-progress."
+			},
+			"response": []
+		},
+		{
+			"name": "Register Process Instance with Client Custom Vars Advanced Query.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query-name\" : \"getProcessInstancesWithClient\",\n  \"query-source\" : \"java:jboss/datasources/ExampleDS\",\n  \"query-expression\" : \"select pil.*, c.id as clientId, c.name, c.bic, c.type from ProcessInstanceLog pil inner join (select mv.map_var_id, mv.processinstanceid from MappedVariable mv) mv on (mv.processinstanceid = pil.id) inner join Client c on (c.id = mv.map_var_id)\",\n  \"query-target\" : \"PROCESS\"\n}"
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/definitions/getProcessInstancesWithClient",
+				"description": "Register Process Instance with Client Custom Vars Advanced Query."
+			},
+			"response": []
+		},
+		{
+			"name": "Query all Process Instances with Client data.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"order-asc\" : false,\n  \"query-params\" : [ {\n    \"cond-column\" : \"status\",\n    \"cond-operator\" : \"EQUALS_TO\",\n    \"cond-values\" : [ \"1\" ]\n  } ],\n  \"result-column-mapping\" : {\n    \"clientid\" : \"integer\",\n    \"name\" : \"string\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/definitions/getProcessInstancesWithClient/filtered-data?mapper=ClientOnboardingProcessInstancesWithCustomVariables&page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"definitions",
+						"getProcessInstancesWithClient",
+						"filtered-data"
+					],
+					"query": [
+						{
+							"key": "mapper",
+							"value": "ClientOnboardingProcessInstancesWithCustomVariables",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "100",
+							"equals": true
+						}
+					]
+				},
+				"description": "Query all Process Instances with Client data."
+			},
+			"response": []
+		},
+		{
+			"name": "Query Process Instances of Client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"order-asc\" : false,\n  \"query-params\" : [ {\n    \"cond-column\" : \"bic\",\n    \"cond-operator\" : \"EQUALS_TO\",\n    \"cond-values\" : [ \"123456789\" ]\n  } ]\n}"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/definitions/getProcessInstancesWithClient/filtered-data?mapper=ProcessInstancesWithCustomVariables&page=0&pageSize=100",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"definitions",
+						"getProcessInstancesWithClient",
+						"filtered-data"
+					],
+					"query": [
+						{
+							"key": "mapper",
+							"value": "ProcessInstancesWithCustomVariables",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "100",
+							"equals": true
+						}
+					]
+				},
+				"description": "Query Process Instances with Client."
+			},
+			"response": []
+		},
+		{
+			"name": "Replace Process Instance with Client Custom Vars Advanced Query.",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query-name\" : \"getProcessInstancesWithClient\",\n  \"query-source\" : \"java:jboss/datasources/ExampleDS\",\n  \"query-expression\" : \"select pil.*, c.id as clientId, c.name, c.bic, c.type from ProcessInstanceLog pil inner join (select mv.map_var_id, mv.processinstanceid from MappedVariable mv) mv on (mv.processinstanceid = pil.id) inner join Client c on (c.id = mv.map_var_id)\",\n  \"query-target\" : \"PROCESS\"\n}"
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/definitions/getProcessInstancesWithClient",
+				"description": "Replace Process Instance with Client Custom Vars Advanced Query."
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition ClientOnboardingProcess",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.ClientOnboardingProcess",
+				"description": "Get process definition"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition SendApplicationLinkProcess",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.SendApplicationLinkProcess",
+				"description": "Get process definition SendApplicationProcess"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition EnrichmentProcess",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.EnrichmentProcess",
+				"description": "Get process definition EnrichmentProcess"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition KycDueDiligenceProcess",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.KycDueDiligenceProcess",
+				"description": "Get process definition KycDueDiligenceProcess"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition LegalDocumentReviewProcess",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.LegalDocumentReviewProcess",
+				"description": "Get process definition LegalDocumentReviewProcess"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition ClientOnboardingProcess HumanTasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.ClientOnboardingProcess/tasks/users",
+				"description": "Get human tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition SendApplicationLinkProcess HumanTasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.ClientOnboardingProcess/tasks/users",
+				"description": "Get human tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition EnrichmentProcess HumanTasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.EnrichmentProcess/tasks/users",
+				"description": "Get human tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition KycDueDiligenceProcess HumanTasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.KycDueDiligenceProcess/tasks/users",
+				"description": "Get human tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Get process definition LegalDocumentReviewProcess HumanTasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://{{kie-server-host}}/kie-server/services/rest/server/containers/client-onboarding/processes/definitions/commercial-client-onboarding.LegalDocumentReviewProcess/tasks/users",
+				"description": "Get human tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Administrator: Get all task instances",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-KIE-ContentType",
+						"value": "JSON"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic a2llc2VydmVyOmtpZXNlcnZlcjEh"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<solver-instance>\n  <status>SOLVING</status>\n    <planning-problem class=\"optaplanner.cloud_balancing.CloudBalancingSolution\">\n  <processes>\n    <optaplanner.cloud__balancing.Process>\n      <id>1</id>\n      <requiredCpu>2</requiredCpu>\n    </optaplanner.cloud__balancing.Process>\n    <optaplanner.cloud__balancing.Process>\n      <id>2</id>\n      <requiredCpu>1</requiredCpu>\n    </optaplanner.cloud__balancing.Process>\n    <optaplanner.cloud__balancing.Process>\n      <id>3</id>\n      <requiredCpu>3</requiredCpu>\n    </optaplanner.cloud__balancing.Process>\n    <optaplanner.cloud__balancing.Process>\n      <id>4</id>\n      <requiredCpu>1</requiredCpu>\n    </optaplanner.cloud__balancing.Process>\n  </processes>\n  <computers>\n    <optaplanner.cloud__balancing.Computer>\n      <id>1</id>\n      <cpu>4</cpu>\n      <cost>300</cost>\n    </optaplanner.cloud__balancing.Computer>\n    <optaplanner.cloud__balancing.Computer>\n      <id>2</id>\n      <cpu>5</cpu>\n      <cost>500</cost>\n    </optaplanner.cloud__balancing.Computer>\n    <optaplanner.cloud__balancing.Computer>\n      <id>3</id>\n      <cpu>6</cpu>\n      <cost>700</cost>\n    </optaplanner.cloud__balancing.Computer>\n  </computers>\n  </planning-problem>\n</solver-instance>"
+				},
+				"url": {
+					"raw": "http://{{kie-server-host}}/kie-server/services/rest/server/queries/tasks/instances/admins?user=Administrator",
+					"protocol": "http",
+					"host": [
+						"{{kie-server-host}}"
+					],
+					"path": [
+						"kie-server",
+						"services",
+						"rest",
+						"server",
+						"queries",
+						"tasks",
+						"instances",
+						"admins"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "Administrator",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
