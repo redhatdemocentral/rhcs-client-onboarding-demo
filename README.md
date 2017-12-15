@@ -91,7 +91,7 @@ See the tagged releases for the following versions of the product:
 
 ![FSI Customer](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/fsi-customer-ui.png)
 
-![Deployment](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/ocp-deployments.png)
+![Deployment](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/ocp-deployment.png)
 
 ![Cloud Suite](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboading-demo/master/docs/demo-images/rhcs-arch.png)
 
