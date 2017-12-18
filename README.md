@@ -87,11 +87,11 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - Process driven application for client onboarding intalled on any OpenShift Container Platform 3.7 using process server 6.4.
 
-![FSI Backoffice](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/fsi-backoffice-ui.png)
+![FSI Backoffice](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/fsi-backoffice-ui.png?raw=true)
 
-![FSI Customer](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/fsi-customer-ui.png)
+![FSI Customer](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/fsi-customer-ui.png?raw=true)
 
-![Deployment](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/ocp-deployment.png)
+![Deployment](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboarding-demo/master/docs/demo-images/ocp-deployment.png?raw=true)
 
-![Cloud Suite](https://raw.githubusercontent.com/redhatdemocentral/rhcs-client-onboading-demo/master/docs/demo-images/rhcs-arch.png)
+![Cloud Suite](https://github.com/redhatdemocentral/rhcs-client-onboarding-demo/blob/master/docs/demo-images/rhcs-arch.png?raw=true)
 
