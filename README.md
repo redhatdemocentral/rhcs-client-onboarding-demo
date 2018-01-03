@@ -33,7 +33,7 @@ Install Process Drive Client Onboarding on OpenShift
    $ ./init.sh 192.168.99.100  # example for OpenShift Container Platform
 ```
 
-Follow output on console for details before you start the next section to run the demo script.
+See next section for how to run through this demo.
 
 
 Running demo
