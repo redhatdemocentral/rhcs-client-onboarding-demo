@@ -52,7 +52,7 @@ There is a [demo script detailing how to run this demo](https://github.com/redha
     
     http://entando-fsi-customer-client-onboarding.192.168.99.100.nip.io/fsi-customer
     ```
-Be sure to follow the demo script.
+Instructions for running this demo are in [this demo script](docs/client_onboarding_demo_script.pdf).
 
 
 Note before running demo:
