@@ -15,7 +15,7 @@ Container Platform.
 
 Install Process Drive Client Onboarding on OpenShift
 ----------------------------------------------------
-1. First ensure you have an OpenShift container based installation, such as one of the followling installed first:
+1. First ensure you have an OpenShift container based installation, such as one of the following installed first:
 
   - [OCP Install Demo](https://github.com/redhatdemocentral/ocp-install-demo)
 
@@ -84,7 +84,7 @@ If for any reason the installation breaks or you want a new installation, just r
 
 Supporting Articles
 -------------------
-Coming soon...
+- [AppDev in the Cloud - Financial Services with Process Driven Application](http://www.schabell.org/2018/01/appdev-in-cloud-financial-services-process-driven-application.html)
 
 
 Released versions
