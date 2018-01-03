@@ -43,7 +43,7 @@ There is a [demo script detailing how to run this demo](https://github.com/redha
   - OpenShift Container Platform examples: 
 
     ```
-    http://entando-fsi-backend-client-onboarding.192.168.99.100.nip.io/fsi-backend
+    http://entando-fsi-backoffice-client-onboarding.192.168.99.100.nip.io/fsi-backoffice
 
          ( u:account / p:adminadmin )
          ( u:knowledge / p:adminadmin )
@@ -65,7 +65,7 @@ following to your local hosts file:
 $ sudo vi /etc/hosts
 
 # add host for OCP demo resulution
-192.168.99.100   entando-fsi-backend-client-onbaording.192.168.99.100.nip.io 
+192.168.99.100   entando-fsi-backoffice-client-onbaording.192.168.99.100.nip.io 
 192.168.99.100   entando-fsi-customer-client-onbaording.192.168.99.100.nip.io 
 ```
 
