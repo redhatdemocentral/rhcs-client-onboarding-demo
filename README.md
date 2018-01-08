@@ -1,5 +1,5 @@
-Process Driven Client Onboarding Application
-============================================
+AppDev Cloud with Financial Services Client Onboarding Application
+==================================================================
 Welcome to the Process Driven Application -  Client Onboarding Demo developed in conjunction with Red Hat JBoss BPM 
 Suite and Entando running on OpenShift Container Platform. This demo illustrates a large number of process-driven use 
 cases and  highlights a client-centric user experience with JBoss BPM Suite. 
@@ -13,8 +13,8 @@ OpenShift Container Platform. It delivers a fully functioning client onboarding 
 Container Platform.
 
 
-Install Process Drive Client Onboarding on OpenShift
-----------------------------------------------------
+Install FSI Client Onboarding on OpenShift
+------------------------------------------
 1. First ensure you have an OpenShift container based installation, such as one of the following installed first:
 
   - [OCP Install Demo](https://github.com/redhatdemocentral/ocp-install-demo)
