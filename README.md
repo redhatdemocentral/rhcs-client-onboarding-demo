@@ -1,5 +1,5 @@
-AppDev Cloud with Financial Services Client Onboarding Application
-==================================================================
+AppDev Cloud with Financial Services Client Onboarding
+======================================================
 Welcome to the Process Driven Application -  Client Onboarding Demo developed in conjunction with Red Hat JBoss BPM 
 Suite and Entando running on OpenShift Container Platform. This demo illustrates a large number of process-driven use 
 cases and  highlights a client-centric user experience with JBoss BPM Suite. 
