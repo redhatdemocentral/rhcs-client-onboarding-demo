@@ -65,8 +65,8 @@ following to your local hosts file:
 $ sudo vi /etc/hosts
 
 # add host for OCP demo resulution
-192.168.99.100   entando-fsi-backoffice-client-onbaording.192.168.99.100.nip.io 
-192.168.99.100   entando-fsi-customer-client-onbaording.192.168.99.100.nip.io 
+192.168.99.100   entando-fsi-backoffice-client-onboarding.192.168.99.100.nip.io 
+192.168.99.100   entando-fsi-customer-client-onboarding.192.168.99.100.nip.io 
 ```
 
 -----
